@@ -1,4 +1,4 @@
-# PS C:\Users\username\Desktop> .\print-audit.ps1
+# PS $env:USERPROFILE\Desktop> .\print-audit.ps1
 
 Get-WinEvent -FilterHashTable @{LogName="Microsoft-Windows-PrintService/Operational"; ID=307; StartTime=(Get-Date -OutVariable Now).AddDays(-1)} | Format-Table -AutoSize -Property TimeCreated,
 			@{label='UserName';expression={$_.properties[2].value}},

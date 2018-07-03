@@ -1,7 +1,7 @@
 <# 
 Possible areas to investigate using/containing the user account “FEIWORLD\rfoss” with an expired/incorrect password:
 	· Credential Manager
-  · Scheduled Tasks 
+	· Scheduled Tasks 
 	· AT jobs
 	· Manual persistent mapped drives
  	· Scripts (e.g., batch, vbs, etc.) set to launch at startup or log on

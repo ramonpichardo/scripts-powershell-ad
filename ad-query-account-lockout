@@ -1,0 +1,6 @@
+# Query for an AD account lockout the easy way
+wevtutil qe Security “/q:*[System [(EventID=4740)]]” /f:text /rd:true /c:1
+
+# Query for an AD account lockout the hard way
+Get-EventLog Security -After (Get-Date).AddHours(-1) | Where EventID -EQ 4740 | Format-Table EventID,MachineName,Index,TimeGenerated,TimeWritten -AutoSize
+Get-EventLog Security | Where Index -EQ -1845712838 | Format-List *

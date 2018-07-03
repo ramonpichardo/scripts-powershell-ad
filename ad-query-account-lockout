@@ -1,3 +1,20 @@
+<# 
+Possible areas to investigate using/containing the user account “FEIWORLD\rfoss” with an expired/incorrect password:
+	· Credential Manager
+  · Scheduled Tasks 
+	· AT jobs
+	· Manual persistent mapped drives
+ 	· Scripts (e.g., batch, vbs, etc.) set to launch at startup or log on
+ 	· System and or Custom and or Run As services
+ 	· .ini files
+	· Outlook Profiles
+	· Local Accounts
+	· Local Profiles (local profile may be corrupted; delete as necessary)
+	· Apps with cached credentials
+	· Malware attempting to use the user account “FEIWORLD\rfoss”
+	· Malware attacking this system
+#>
+
 # Query for an AD account lockout the easy way
 wevtutil qe Security “/q:*[System [(EventID=4740)]]” /f:text /rd:true /c:1
 

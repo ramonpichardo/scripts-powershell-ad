@@ -1,4 +1,7 @@
-﻿Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+# Set script execution policy to "bypass" and then install Chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+# Create and update Chocolatey profile
 Write-Host $profile
 (
 echo # Chocolatey profile
@@ -8,17 +11,17 @@ echo   Import-Module "$ChocolateyProfile"
 echo }
 )>"$profile"
 
-# Install Chocolatey Core Extension
+# Install Chocolatey Core Extensions
 choco install -y chocolatey-core.extension
 
-#Install browsers
+# Install browsers
 choco install -y firefox googlechrome
 
-#Install browser add-ins
+# Install browser add-ins
 choco install -y adobeshockwaveplayer flashplayerplugin flashplayerppapi jre8 silverlight 
 
-#Install utilities 
+# Install utilities 
 choco install -y 7zip adobereader-update notepadplusplus pstools putty.install visioviewer vlc windirstat winscp
 
-#Install network analysis tools
+# Install network analysis tools
 choco install -y advanced-ip-scanner nmap winpcap wireshark

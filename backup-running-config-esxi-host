@@ -1,0 +1,9 @@
+# Save ESXi host running configuration using VMware PowerCLI
+
+$VIServer = "hiovmvc01.hq.acme.com"
+$VMHost = "ushilvm999.hq.acme.com"
+
+Connect-VIServer $VIServer
+mkdir C:\Windows\Temp\running-config-esxi-host
+Get-VMHost $VMHost | Get-VMHostFirmware -BackupConfiguration -DestinationPath 'C:\Windows\Temp\running-config-esxi-host\'
+exit

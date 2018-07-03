@@ -20,5 +20,5 @@ choco install -y adobeshockwaveplayer flashplayerplugin flashplayerppapi jre8 si
 #Install utilities 
 choco install -y 7zip adobereader-update notepadplusplus pstools putty.install visioviewer vlc windirstat winscp
 
-#Install network tools
-choco install -y winpcap wireshark
+#Install network analysis tools
+choco install -y advanced-ip-scanner nmap winpcap wireshark

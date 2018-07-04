@@ -1,9 +1,9 @@
+<#
+Run this setup script within a PowerShell session launched using "Run as Administrator".
+#>
+
 # Install PowerShellGet
 Install-Module -Name PowerShellGet -Force
-
-# Install VMware PowerCLI
-Install-Module -Name VMware.PowerCLI -RequiredVersion 6.5.4.7155375 -AllowClobber
-Set-PowerCLIConfiguration -InvalidCertificateAction Ignore
 
 # Set script execution policy to "bypass" and then install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))

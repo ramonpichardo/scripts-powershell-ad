@@ -1,3 +1,6 @@
+# Delete Windows Update policies applied to local machine
+
+# Prerequisites:
 # Log on as a local Administrator
 # Open Administrator console (PowerShell or Command Prompt)
 

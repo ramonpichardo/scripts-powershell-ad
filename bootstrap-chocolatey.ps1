@@ -1,6 +1,17 @@
-<#
-Run this setup script within a PowerShell session launched using "Run as Administrator".
-#>
+# Launch this script in an administrative PowerShell session.
+#Requires -RunAsAdministrator
+
+# Verify this script is running in an administrator security context.
+$IsAdmin=[Security.Principal.WindowsIdentity]::GetCurrent()
+If ((New-Object Security.Principal.WindowsPrincipal $IsAdmin).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator) -eq $FALSE)
+{
+      "`nERROR: This script will only run in an administrator context. Run this script after launching a Run As Administrator PowerShell session."
+      pause
+      exit
+}
+
+# Install Nuget
+Install-PackageProvider Nuget –Force
 
 # Install PowerShellGet
 Install-Module -Name PowerShellGet -Force

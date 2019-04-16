@@ -29,6 +29,8 @@ echo   Import-Module "$ChocolateyProfile"
 echo }
 )>"$profile"
 
+. $profile
+
 # Install Chocolatey Core Extensions
 choco install -y chocolatey-core.extension
 

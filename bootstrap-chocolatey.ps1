@@ -32,16 +32,16 @@ echo }
 . $profile
 
 # Install Chocolatey Core Extensions
-choco install -y chocolatey-core.extension
+choco install chocolatey-core.extension -y
 
 # Install browsers
-choco install -y firefox googlechrome
+choco install firefox googlechrome -y
 
 # Install browser add-ins
-choco install -y adobeshockwaveplayer flashplayerplugin flashplayerppapi jre8 silverlight 
+choco install adobeshockwaveplayer flashplayerplugin flashplayerppapi jre8 silverlight -y 
 
 # Install utilities 
-choco install -y 7zip adobereader-update notepadplusplus pstools putty.install visioviewer vlc windirstat winscp
+choco install 7zip adobereader-update notepadplusplus pstools putty.install visioviewer vlc windirstat winscp -y
 
 # Install network analysis tools
-choco install -y advanced-ip-scanner nmap winpcap wireshark
+choco install advanced-ip-scanner nmap winpcap wireshark -y

@@ -1,0 +1,2 @@
+Import-Module ActiveDirectory
+Get-ADObject -LDAPFilter "(&(&(&(uncName=*)(objectCategory=printQueue))))" -Properties * | Sort-Object -Unique -Property servername | Select servername

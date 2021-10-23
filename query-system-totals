@@ -1,0 +1,5 @@
+# How many production systems do we have in total?
+Get-ADComputer -SearchBase "OU=Production,DC=acme,DC=org" -Filter * | Measure-Object -Property Name -Line
+
+# How many production workstations do we have in total?
+Get-ADComputer -SearchBase "OU=Workstations,OU=Production,DC=acme,DC=org" -Filter * | Measure-Object -Property Name -Line

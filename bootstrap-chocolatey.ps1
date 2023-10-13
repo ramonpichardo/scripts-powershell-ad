@@ -35,13 +35,19 @@ echo }
 choco install chocolatey-core.extension -y
 
 # Install browsers
-choco install firefox googlechrome -y
+choco install googlechrome -y
 
 # Install browser add-ins
-choco install adobeshockwaveplayer flashplayerplugin flashplayerppapi jre8 silverlight -y 
+choco install bitwarden-edge bitwarden-chrome -y 
 
 # Install utilities 
-choco install 7zip adobereader-update notepadplusplus pstools putty.install visioviewer vlc windirstat winscp -y
+choco install 7zip adobereader greenshot notepadplusplus powershell-core pstools putty.install visioviewer vlc vmware-horizon-client vscode windirstat winscp xmind -y
 
 # Install network analysis tools
 choco install advanced-ip-scanner nmap winpcap wireshark -y
+
+# Install web conferencing tools
+choco install webex zoom -y
+
+# Install HID tools
+choco install unifying logitech-options -y
